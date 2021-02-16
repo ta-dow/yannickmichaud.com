@@ -1,0 +1,65 @@
+html, body {
+  	font-family: 'Lato', sans-serif;
+  	background-color: #fcfcfc;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	font-size: 18px;
+}
+a, a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.08), 
+	            0 2px 2px rgba(0,0,0,0.08), 
+	            0 4px 4px rgba(0,0,0,0.08), 
+	            0 8px 8px rgba(0,0,0,0.08),
+	            0 16px 16px rgba(0,0,0,0.08);
+}
+nav {
+	margin: 10px 100px;
+}
+nav a {
+	padding: 20px;
+	font-weight: 200;
+}
+nav a:hover {
+	font-weight: 500;
+	padding: 20px;
+}
+
+/*laptops/computers only*/
+@media only screen and (orientation: landscape) {
+	.col-6 {
+		display: inline-block;
+		float: none;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+	.index-content {
+		margin: 0 130px;
+	}
+	.index-content img {
+		height: 1000px;
+	}
+}
+
+/*mobiles only*/
+@media screen and (max-width: 50em) {
+	nav {
+		margin: 0;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	.index-content img {
+		height: 250px;
+	}
+}
