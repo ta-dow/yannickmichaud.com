@@ -7,6 +7,7 @@ html, body {
 	height: 100%;
 	top: 0;
 	font-size: 18px;
+	scroll-behavior: smooth;
 }
 a, a:hover {
 	text-decoration: none;
@@ -16,15 +17,9 @@ img {
 	width: 100%;
 	height: auto;
 	object-fit: cover;
-	border-radius: 2px;
-	box-shadow: 0 1px 1px rgba(0,0,0,0.08), 
-	            0 2px 2px rgba(0,0,0,0.08), 
-	            0 4px 4px rgba(0,0,0,0.08), 
-	            0 8px 8px rgba(0,0,0,0.08),
-	            0 16px 16px rgba(0,0,0,0.08);
 }
 nav {
-	margin: 10px 100px;
+	margin: 10px 50px;
 }
 nav a {
 	padding: 20px;
@@ -34,32 +29,111 @@ nav a:hover {
 	font-weight: 500;
 	padding: 20px;
 }
+.nav-active {
+	font-weight: 500;
+}
 
-/*laptops/computers only*/
+/*desktop only*/
 @media only screen and (orientation: landscape) {
 	.col-6 {
 		display: inline-block;
 		float: none;
-		padding-right: 25px;
-		padding-left: 25px;
 	}
-	.index-content {
-		margin: 0 130px;
+	.col-lg-6 {
+		padding-left: 0;
+		padding-right: 0;
 	}
-	.index-content img {
+	.container-fluid {
+		padding: 50px;
+	}
+	.main-img {
 		height: 1000px;
+		padding: 15px;
 	}
 }
 
-/*mobiles only*/
+/*mobile only*/
 @media screen and (max-width: 50em) {
 	nav {
 		margin: 0;
 	}
 	h1 {
 		font-size: 2em;
-	}
-	.index-content img {
-		height: 250px;
-	}
+	}	
+}
+
+/*Zoom on Hover*/
+.zoom-img {
+	width: 100%;
+	height: 400px;
+	vertical-align: super;
+	transition: box-shadow 0.4s ease-in-out, transform 0.2s ease;
+	box-shadow: 0 1px 1px rgb(0 0 0 / 8%), 0 2px 2px rgb(0 0 0 / 8%), 0 4px 4px rgb(0 0 0 / 8%), 0 8px 8px rgb(0 0 0 / 8%), 0 16px 16px rgb(0 0 0 / 8%);
+}
+.zoom-img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 9%), 0 2px 2px rgb(0 0 0 / 9%), 0 4px 4px rgb(0 0 0 / 9%), 0 8px 8px rgb(0 0 0 / 9%), 0 16px 16px rgb(0 0 0 / 9%);
+}
+
+/*CTA Button*/
+.cta {
+	 position: relative;
+	 margin: 35px;
+	 padding: 19px 22px;
+	 transition: all 0.2s ease;
+}
+ .cta:before {
+	 content: "";
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 display: block;
+	 border-radius: 28px;
+	 background: #c2e2df;
+	 width: 56px;
+	 height: 56px;
+	 transition: all 0.3s ease;
+}
+ .cta span {
+	 position: relative;
+	 font-size: 16px;
+	 line-height: 18px;
+	 font-weight: 900;
+	 letter-spacing: 0.25em;
+	 text-transform: uppercase;
+	 vertical-align: middle;
+}
+ .cta svg {
+	 position: relative;
+	 top: 0;
+	 margin-left: 10px;
+	 fill: none;
+	 stroke-linecap: round;
+	 stroke-linejoin: round;
+	 stroke: #111;
+	 stroke-width: 2;
+	 transform: translateX(-5px);
+	 transition: all 0.3s ease;
+}
+ .cta:hover:before {
+	 width: 55%;
+	 background: #c2e2df;
+}
+ .cta:hover svg {
+	 transform: translateX(0);
+}
+ .cta:active {
+	 transform: scale(0.96);
+}
+
+footer img {
+	width: 25px;
+	margin: 15px;
+	opacity: 0.8;
+}
+footer img:hover {
+	opacity: 1;
+}
+footer {
+	font-size: 14px;
 }
