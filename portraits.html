@@ -12,18 +12,32 @@
     </head>
     <body>
         <center>
-            <br>
-            <nav class="navbar">
-                <div class="container-fluid">
-                    <a href="index.html">
-                        <h1>Yannick Michaud</h1>    
-                    </a>
-                    <br><br>
-                    <div class="text-uppercase">
-                        <a href="#" class="nav-active">portraits</a>
-                        <a href="wildlife.html">wildlife</a>
-                        <a href="commercial.html">commercial</a>
-                    </div>
+            <br><br>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <h1>Yannick Michaud</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav navbar-nav ml-auto">
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item active text-uppercase">
+                            <a class="nav-link" href="#">portraits</a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="wildlife.html">wildlife</a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="commercial.html">commercial</a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="landscape.html">landscape</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
             <div class="container-fluid">
@@ -83,7 +97,7 @@
                         <img src="static/images/portrait_25.jpg" class="main-img">
                     </div>
                 </div>
-                <img src="static/images/portrait_20.jpg" style="padding: 25px 0">
+                <img src="static/images/portrait_20.jpg" class="main-img">
                 <div class="row">
                     <div class="col-lg-6">
                         <img src="static/images/portrait_17.jpg" class="main-img">
@@ -127,6 +141,17 @@
                     <img src="static/images/icon_email.png">
                 </a>
             </footer>
+            <!-- Bootstrap Navbar -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="static/js/bootstrap.js"></script>
+            <script type="text/javascript">
+                $(function () {
+                  $(document).scroll(function () {
+                    var $nav = $(".navbar-expand-lg");
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                  });
+                });
+            </script>
         </center>
         <br><br>
     </body>

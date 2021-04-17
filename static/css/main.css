@@ -54,12 +54,14 @@ nav a {
 	padding: 20px;
 	font-weight: 200;
 }
-nav a:hover {
-	font-weight: 500;
-	padding: 20px;
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
 }
-.nav-active {
-	font-weight: 500;
+.navbar-light .navbar-toggler {
+	border-color: rgba(0,0,0,0);
 }
 
 /* header section */
@@ -121,7 +123,7 @@ nav a:hover {
 		margin: 0;
 	}
 	h1 {
-		font-size: 40px;
+		font-size: 25px;
 	}
 	.container-fluid {
 		padding: 10px;
