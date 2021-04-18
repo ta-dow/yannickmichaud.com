@@ -31,6 +31,9 @@ a, a:hover {
 	text-decoration: none;
 	color: #000000;
 }
+h2 {
+	font-size: 2.5rem;
+}
 p {
 	font-size: 17px;
 	font-weight: 200;
@@ -94,7 +97,7 @@ nav a {
     text-transform: uppercase;
     margin-left: 70px;
 }
-.header-text h1, .header-text p {
+.header-text h2, .header-text p {
 	margin-left: 70px;
 	padding: 75px 75px 0 0; 
 }
@@ -148,7 +151,7 @@ nav a {
 	.header-img img {
 		padding-bottom: 20px;
 	}
-	.header-text h1 {
+	.header-text h2 {
 		margin-left: 0;
 		padding: 40px 0;
 		text-align: center;
