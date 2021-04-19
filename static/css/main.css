@@ -26,6 +26,8 @@ html, body {
 	top: 0;
 	font-size: 18px;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 a, a:hover {
 	text-decoration: none;
