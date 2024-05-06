@@ -1,5 +1,4 @@
 /*
-
 - desktop = 992px to infinity
 	- header: black background
 		- .header-text on the left
@@ -18,7 +17,7 @@
 */
 html, body {
   	font-family: 'Lato', sans-serif;
-  	background-color: #fcfcfc;
+  	background-color: #fff;
 	padding: 0;
 	margin: 0;
 	width: 100%;
@@ -37,7 +36,7 @@ h2 {
 	font-size: 2.5rem;
 }
 p {
-	font-size: 17px;
+	font-size: 19px;
 	font-weight: 200;
 	letter-spacing: 0.05em;
 }
