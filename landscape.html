@@ -53,14 +53,28 @@
             <a href="index.html">Yannick Michaud &copy; <span id="copyrightYear"></span></a>
         </footer>
         
-        <!-- update copyright year automatically -->
         <script>
+
+            const menuButton = document.querySelector(".hamburger-btn");
+            const navigation = document.querySelector(".navigation");
+            menuButton.addEventListener("click", () => {
+                const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+                menuButton.setAttribute("aria-expanded", String(!isOpen));
+                menuButton.setAttribute(
+                    "aria-label",
+                    isOpen ? "Open navigation menu" : "Close navigation menu"
+                );
+                navigation.classList.toggle("is-open", !isOpen);
+                menuButton.classList.toggle("open", !isOpen);
+            });
+            
             function updateCopyrightYear() {
                 const currentYear = new Date().getFullYear();
                 document.getElementById("copyrightYear").textContent = currentYear;
             }
-            updateCopyrightYear();
-        </script>
+            updateCopyrightYear(); 
 
+        </script>
+        
     </body>
 </html>
