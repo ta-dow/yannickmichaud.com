@@ -439,21 +439,3 @@ footer a:hover {
 		height: 500px;
 	}
 }
-
-@media (min-width: 1600px) {
-    h2 {
-        letter-spacing: 0.1em;
-    }
-    p {
-        letter-spacing: 0.03em;
-    }
-    .gallery img {
-        height: 90em;
-    }
-    .portfolio-grid img {
-        height: 40em;
-    }
-    .intro-content {
-        padding: 6em;
-    }
-}
