@@ -18,26 +18,26 @@ a, a:hover  {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 2vw, 3.5rem);
     font-weight: 500;
     line-height: 1.2;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.35rem, 1.6vw, 2rem);
 	font-weight: 500;
     line-height: 1.2;
 }
 
 h6 {
+    font-size: clamp(0.7rem, 1.1vw, 1rem);
     font-weight: 900;
-	font-size: 16px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
 }
 
 p {
-    font-size: 17px;
+    font-size: clamp(1rem, 1.1vw, 1.125rem);
     font-weight: 300;
     line-height: 1.5;
 }
@@ -64,7 +64,7 @@ nav {
     z-index: 10;
     width: 100%;
     background: rgba(255, 255, 255, 1);
-	padding: 2em 5em;
+	padding: 1em clamp(2em, 5vw, 5em);
 }
 
 .navigation a {
@@ -138,8 +138,8 @@ nav {
 
 .intro-image img {
     width: 100%;
-    height: 100%;
-    min-height: 650px;
+    height: 100vh;
+    min-height: 35em;
     object-fit: cover;
 }
 
@@ -147,11 +147,11 @@ nav {
     order: 1;
     display: flex;
     flex-direction: column;
-    padding: 4em;
+    padding: clamp(2em, 5vw, 5em);
 }
 
 .intro-content p {
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
     text-align: justify;
     text-justify: inter-word;
 }
@@ -162,8 +162,8 @@ nav {
 .portfolio {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
-    margin-top: 5rem;
+    gap: clamp(3rem, 6vw, 6rem);
+    margin-top: clamp(3rem, 6vw, 6rem);
 }
 
 .portfolio-item {
@@ -179,12 +179,12 @@ nav {
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 15px;
+    gap: 1em;
 }
 
 .portfolio-grid img {
     width: 100%;
-    height: 400px;
+    height: 25em;
     object-fit: cover;
     box-shadow:
         0 1px 1px rgba(0, 0, 0, 0.08),
@@ -215,21 +215,24 @@ nav {
 }
 
 .portfolio-description {
-    padding: 35px 70px 0 60px;
+    padding: clamp(2em, 4vw, 3em) clamp(2em, 5vw, 4em) 0;
 }
 
 .portfolio-description h2 {
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.5em;
 }
 
 .portfolio-description p {
     margin: 0;
-	padding: 0 20px 35px 0;
+	padding: 0 1.25em 2em 0;
 }
+
+
+/* Portfolio Highlight Button */
 
 .cta {
     position: relative;
-    padding: 14px 22px;
+    padding: 0.875em 1.375em;
     transition: all 0.2s ease;
 }
 .cta:before {
@@ -240,8 +243,8 @@ nav {
     display: block;
     border-radius: 28px;
     background: #c2e2df;
-    width: 56px;
-    height: 56px;
+    width: 3.5em;
+    height: 3.5em;
     transition: all 0.3s ease;
 }
 .cta span {
@@ -295,41 +298,31 @@ footer a:hover {
 /* Gallery */
 
 .gallery {
-    margin-top: 7em;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 15px;
+    gap: 1em;
+    margin-top: clamp(4em, 8vw, 6em);
 }
 
 .gallery img {
     width: 100%;
-    height: 900px;
+    height: 110vh;
+    min-height: 25em;
     display: block;
 	object-fit: cover;
 }
 
+
 /* Mobile */
 
 @media screen and (max-width: 1125px) {
-    h1 {
-        font-size: 25px;
-    }
-
-	h6 {
-		font-size: 12px;
-	}
-
     main {
-		padding: 10px;
+        padding: 1em;
     }
 
 	nav {
 		padding: 1em 2em;
 	}
-
-    .site-nav {
-        padding: 1.5em 20px;
-    }
 
     .hamburger-btn {
         display: flex;
@@ -372,24 +365,28 @@ footer a:hover {
 
     .intro-content {
         order: 2;
-		padding: 2rem 1rem;
+		padding: 1em;
         background-color: #ffffff;
     }
 
     .intro-image img {
+        height: auto;
         min-height: 0;
-        padding-bottom: 20px;
     }
 
     .intro-content p {
         text-align: left;
     }
+
     .portfolio-description {
-        padding: 35px 30px 0 30px;
+        padding: 2em 2em 0;
+        margin-bottom: 4em;
     }
+
     .cta svg {
         display: none;
     }
+
     .cta span {
         font-size: 0.6em;
 
@@ -399,43 +396,38 @@ footer a:hover {
 @media screen and (max-width: 650px) {
     .portfolio {
         gap: 4rem;
-        margin-top: 4rem;
+        margin-top: 0;
     }
-
+    
     .portfolio-item > a {
         display: flex;
         flex-direction: column;
     }
-
-    .image-grid {
+    
+    .portfolio-grid {
         grid-template-columns: 1fr;
-        gap: 8px;
     }
 
-    .image-grid img {
-		height: 350px;
+    .portfolio-grid img {
+        height: 45vh;
+        min-height: 18em;
     }
+
+    .portfolio-description {
+        padding: 2em 1em 0;
+    } 
 
     .portfolio-description h2 {
         margin-bottom: 1rem;
     }
 
-    .portfolio-description p {
-        font-size: 16px;
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 0.5em;
     }
 
-    .cta {
-        margin-top: 25px;
-        margin-left: 0;
+    .gallery img {
+        height: 90vh;
+        min-height: 25em;
     }
-}
-    
-@media screen and (max-width: 550px) {
-    .gallery {
-		grid-template-columns: 1fr;
-		gap: 8px;
-	}
-	.gallery img {
-		height: 500px;
-	}
 }
