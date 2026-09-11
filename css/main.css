@@ -370,7 +370,7 @@ footer a:hover {
 
     .intro-content {
         order: 2;
-		padding: 1em;
+		padding: 1em 0;
         background-color: #ffffff;
     }
 
@@ -431,7 +431,7 @@ footer a:hover {
     }
 
     .gallery img {
-        height: 90vh;
+        height: 50vh;
         min-height: 25em;
     }
 }
